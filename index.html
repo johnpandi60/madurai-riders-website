@@ -6,32 +6,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Madurai Riders | Cab Tours & Travels</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#100e0b;color:#fff;line-height:1.6}
-header{background:#090909;padding:20px;text-align:center;border-bottom:3px solid #d6a72b}
-header h1{color:#f5c94d;font-size:27px}
-header p{color:#eee}
-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:17px;padding:15px;background:#21180d}
-nav a{color:#f5c94d;text-decoration:none;font-weight:bold}
-.hero{text-align:center;padding:65px 18px;background:linear-gradient(120deg,#170d08,#57401a,#100e0b)}
-.hero h2{font-size:34px;color:#ffda65}
-.hero p{margin:15px auto;max-width:600px}
-.btn{display:inline-block;background:#d5a52b;color:#160f06;padding:12px 22px;border-radius:25px;text-decoration:none;font-weight:bold;margin:8px}
-section{padding:40px 18px;max-width:1050px;margin:auto}
-h2.title{text-align:center;color:#f5c94d;margin-bottom:25px;font-size:27px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#211a11;border:1px solid #b88a29;border-radius:13px;padding:20px;text-align:center}
-.card h3{color:#ffcf4d;margin:10px}
-.price{font-size:27px;color:#ffda65;font-weight:bold}
-.car{font-size:65px}
-.services p{padding:9px;border-bottom:1px solid #59451e}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
-.place{background:#282014;border:1px solid #a77c24;padding:18px;text-align:center;border-radius:10px}
-.place span{font-size:32px}
-.contact{text-align:center;background:#24190b;border:1px solid #d5a52b;border-radius:15px;padding:25px}
-footer{text-align:center;background:#080808;padding:22px;color:#d6b95e}
-button{cursor:pointer;border:0}
-.lang{background:#d5a52b;padding:9px 16px;border-radius:20px;font-weight:bold}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:#080808;color:#fff;font-family:Arial,sans-serif;line-height:1.6}
+header{text-align:center;padding:25px 12px;background:#080808;border-bottom:3px solid #d5a52b}
+header h1{color:#f5cc4d;font-size:30px;margin:0}
+header p{margin:3px}
+button,.btn{background:#d5a52b;color:#080808;border:0;padding:12px 20px;border-radius:25px;font-weight:bold;text-decoration:none;cursor:pointer;display:inline-block;margin:5px}
+nav{background:#21180d;padding:12px;text-align:center;position:sticky;top:0;z-index:5}
+nav a{color:#f5cc4d;text-decoration:none;font-weight:bold;margin:8px;display:inline-block}
+.hero{text-align:center;padding:75px 18px;background:linear-gradient(120deg,#160d06,#76501a,#160d06)}
+.hero h2{font-size:36px;color:#ffdc69}
+.hero p{font-size:18px}
+section{padding:40px 16px;max-width:1100px;margin:auto}
+.title{text-align:center;color:#f5cc4d;font-size:27px;margin-bottom:25px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:#211b11;border:1px solid #987321;border-radius:15px;padding:15px;text-align:center;overflow:hidden}
+.card img{width:100%;height:175px;object-fit:cover;border-radius:10px}
+.card h3{color:#ffdc69}
+.price{font-size:23px;color:#ffdc69;font-weight:bold}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:10px}
+.contact{background:#24190c;border:1px solid #d5a52b;border-radius:15px;padding:22px;text-align:center}
+input{padding:12px;border-radius:8px;border:1px solid #d5a52b;width:100%;margin:8px 0;font-size:16px}
+.result{color:#ffdc69;font-size:21px;font-weight:bold}
+footer{text-align:center;background:#080808;padding:25px;color:#d5a52b}
+.small{color:#ccc;font-size:13px}
 </style>
 </head>
 <body>
@@ -39,8 +37,8 @@ button{cursor:pointer;border:0}
 <header>
 <h1>MADURAI RIDERS</h1>
 <p>Cab Tours & Travels</p>
-<p>Your Trusted Travel Partner in Madurai</p>
-<button class="lang" onclick="toggleLang()">தமிழ் / English</button>
+<p data-en="Your Trusted Travel Partner in Madurai" data-ta="மதுரையின் நம்பகமான பயணத் துணை">Your Trusted Travel Partner in Madurai</p>
+<button onclick="toggleLang()">தமிழ் / English</button>
 </header>
 
 <nav>
@@ -54,18 +52,17 @@ button{cursor:pointer;border:0}
 </nav>
 
 <div class="hero" id="home">
-<h2>Explore Tamil Nadu With Comfort</h2>
-<p>Reliable local, outstation, airport and family cab services from Madurai. Travel comfortably with Madurai Riders.</p>
+<h2 data-en="Explore Tamil Nadu With Comfort" data-ta="தமிழ்நாட்டை வசதியாக சுற்றிப் பாருங்கள்">Explore Tamil Nadu With Comfort</h2>
+<p data-en="Reliable local, outstation, airport and family cab services from Madurai." data-ta="மதுரையிலிருந்து உள்ளூர், வெளியூர், விமான நிலைய மற்றும் குடும்ப பயணங்களுக்கான நம்பகமான கார் சேவை.">Reliable local, outstation, airport and family cab services from Madurai.</p>
 <a class="btn" href="tel:8122184862">Call Now</a>
-<a class="btn" href="https://wa.me/918122184864">WhatsApp Booking</a>
+<a class="btn" href="https://wa.me/918122184864?text=Hello%20Madurai%20Riders%2C%20I%20want%20to%20book%20a%20cab">WhatsApp Booking</a>
 </div>
 
 <section id="about">
 <h2 class="title">About Madurai Riders</h2>
 <div class="card">
-<p>Welcome to Madurai Riders Cab Tours & Travels. We provide convenient cab services for local journeys, outstation trips, airport transfers, temple visits, family holidays and corporate travel.</p>
-<p>Our aim is to make every journey comfortable, convenient and memorable.</p>
-<p><b>Owner: B. ARUNPANDI</b></p>
+<p data-en="Welcome to Madurai Riders Cab Tours & Travels. We provide convenient cab services for local journeys, outstation trips, airport transfers and family tours. Our aim is to make every journey comfortable, convenient and memorable." data-ta="மதுரை ரைடர்ஸ் கேப் டூர்ஸ் அண்ட் டிராவல்ஸுக்கு வரவேற்கிறோம். உள்ளூர் பயணங்கள், வெளியூர் பயணங்கள், விமான நிலைய அழைத்துச் செல்லுதல் மற்றும் குடும்ப சுற்றுலாக்களுக்கு நம்பகமான கார் சேவைகளை வழங்குகிறோம். உங்கள் பயணம் வசதியாகவும் மகிழ்ச்சியாகவும் அமையச் செய்வதே எங்கள் நோக்கம்.">Welcome to Madurai Riders Cab Tours & Travels. We provide convenient cab services for local journeys, outstation trips, airport transfers and family tours. Our aim is to make every journey comfortable, convenient and memorable.</p>
+<strong>Owner: B. ARUNPANDI</strong>
 </div>
 </section>
 
@@ -73,90 +70,91 @@ button{cursor:pointer;border:0}
 <h2 class="title">Our Vehicles</h2>
 <div class="cards">
 <div class="card">
-<div class="car">🚘</div>
+<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800" alt="Sedan car">
 <h3>Maruti Suzuki Swift Dzire</h3>
 <p>2026 Model</p>
 <div class="price">₹15 / KM</div>
 </div>
 <div class="card">
-<div class="car">🚙</div>
+<img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800" alt="Family SUV">
 <h3>Kia Carens</h3>
-<p>Premium family travel</p>
+<p>Family Travel</p>
 <div class="price">₹18 / KM</div>
 </div>
 </div>
+<p class="small">Vehicle pictures are illustrative and may not show your exact cars.</p>
 </section>
 
-<section id="services" class="services">
+<section id="services">
 <h2 class="title">Our Services</h2>
-<div class="card">
-<p>🚕 Local & Outstation Cab Services</p>
-<p>✈️ Airport Pickup & Drop</p>
-<p>👨‍👩‍👧 Family Tours & Holiday Packages</p>
-<p>🛕 Temple Tours & Sightseeing</p>
-<p>💼 Corporate Travel Services</p>
-<p>📍 Customised Travel Packages</p>
+<div class="cards">
+<div class="card"><h3>🚕 Local & Outstation</h3><p>Comfortable city and long-distance travel.</p></div>
+<div class="card"><h3>✈️ Airport Pickup & Drop</h3><p>Airport transfers with convenient pickup.</p></div>
+<div class="card"><h3>🏞️ Family Tours</h3><p>Enjoy family holidays and sightseeing.</p></div>
+<div class="card"><h3>💼 Corporate Trips</h3><p>Travel arrangements for business journeys.</p></div>
 </div>
 </section>
 
 <section id="places">
-<h2 class="title">Tourist Destinations</h2>
-<h3 style="color:#ffda65;margin:15px">Madurai Local Places</h3>
-<div class="gallery">
-<div class="place"><span>🛕</span><br>Meenakshi Amman Temple</div>
-<div class="place"><span>🏛️</span><br>Thirumalai Nayakkar Mahal</div>
-<div class="place"><span>🏛️</span><br>Gandhi Memorial Museum</div>
-<div class="place"><span>🛕</span><br>Alagar Kovil</div>
-<div class="place"><span>🛕</span><br>Thiruparankundram</div>
-<div class="place"><span>🌊</span><br>Vandiyur Teppakulam</div>
+<h2 class="title">Madurai Local Tourist Places</h2>
+<div class="cards gallery">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600100397608-f0105f6e1aef?w=800" alt="Temple">
+<h3>Meenakshi Amman Temple</h3><p>Madurai</p>
 </div>
-<h3 style="color:#ffda65;margin:25px 15px 15px">Outstation Destinations</h3>
-<div class="gallery">
-<div class="place">🌊<br>Rameswaram</div>
-<div class="place">⛰️<br>Kodaikanal</div>
-<div class="place">🌿<br>Ooty</div>
-<div class="place">💦<br>Courtallam</div>
-<div class="place">🛕<br>Kanyakumari</div>
-<div class="place">🛕<br>Palani</div>
-<div class="place">🏛️<br>Thanjavur</div>
-<div class="place">🌳<br>Thekkady</div>
-<div class="place">🌊<br>Hogenakkal</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800" alt="Palace">
+<h3>Thirumalai Nayakkar Mahal</h3><p>Madurai</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1595658658481-d53d3f999875?w=800" alt="Temple">
+<h3>Alagar Kovil</h3><p>Madurai</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=800" alt="Indian temple">
+<h3>Thiruparankundram</h3><p>Madurai</p>
+</div>
+</div>
+
+<h2 class="title">Outstation Destinations</h2>
+<div class="cards gallery">
+<div class="card"><img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=800" alt="Rameswaram"><h3>Rameswaram</h3><p>Ramanathapuram</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800" alt="Kodaikanal"><h3>Kodaikanal</h3><p>Dindigul</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800" alt="Ooty"><h3>Ooty</h3><p>Nilgiris</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800" alt="Kanyakumari"><h3>Kanyakumari</h3><p>Tamil Nadu</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=800" alt="Thanjavur"><h3>Thanjavur</h3><p>Tamil Nadu</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="Tourism"><h3>Munnar</h3><p>Kerala</p></div>
 </div>
 </section>
 
 <section id="fares">
-<h2 class="title">Our Cab Fare Details</h2>
-<div class="cards">
+<h2 class="title">Cab Fare Calculator</h2>
 <div class="card">
-<h3>Swift Dzire – ₹15/KM</h3>
-<p>10 KM – ₹150</p>
-<p>20 KM – ₹300</p>
-<p>50 KM – ₹750</p>
-<p>100 KM – ₹1,500</p>
-<p>200 KM – ₹3,000</p>
+<h3>Swift Dzire – ₹15/km</h3>
+<h3>Kia Carens – ₹18/km</h3>
+<label for="car">Select Vehicle</label>
+<select id="car" style="width:100%;padding:12px;border-radius:8px">
+<option value="15">Swift Dzire – ₹15/km</option>
+<option value="18">Kia Carens – ₹18/km</option>
+</select>
+<label for="km">Enter Travel Distance (KM)</label>
+<input id="km" type="number" min="1" placeholder="Example: 100">
+<button onclick="calculate()">Calculate Fare</button>
+<p class="result" id="result">Estimated Fare: ₹0</p>
+<p class="small">Toll, parking, permits and other applicable charges are extra. Final fare should be confirmed before booking.</p>
 </div>
-<div class="card">
-<h3>Kia Carens – ₹18/KM</h3>
-<p>10 KM – ₹180</p>
-<p>20 KM – ₹360</p>
-<p>50 KM – ₹900</p>
-<p>100 KM – ₹1,800</p>
-<p>200 KM – ₹3,600</p>
-</div>
-</div>
-<p style="text-align:center;margin-top:18px;color:#e6c77c">Additional toll, parking, permit and other applicable charges may be extra. Confirm final trip fare before booking.</p>
 </section>
 
 <section id="contact">
-<h2 class="title">Contact Us</h2>
+<h2 class="title">Contact Madurai Riders</h2>
 <div class="contact">
-<h3>MADURAI RIDERS CAB TOURS & TRAVELS</h3>
-<p>Owner: B. ARUNPANDI</p>
+<h2>MADURAI RIDERS CAB TOURS & TRAVELS</h2>
+<h3>Owner: B. ARUNPANDI</h3>
 <p>📍 Madurai, Tamil Nadu</p>
 <p>📞 8122184862</p>
 <p>WhatsApp: 8122184864</p>
-<a class="btn" href="tel:8122184862">Call Us</a>
-<a class="btn" href="https://wa.me/918122184864">WhatsApp Us</a>
+<a class="btn" href="tel:8122184862">Call Now</a>
+<a class="btn" href="https://wa.me/918122184864?text=Hello%20Madurai%20Riders%2C%20I%20want%20to%20book%20a%20cab">WhatsApp Booking</a>
 <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Madurai+Tamil+Nadu">Find Madurai on Maps</a>
 </div>
 </section>
@@ -167,8 +165,22 @@ button{cursor:pointer;border:0}
 </footer>
 
 <script>
+let tamil=false;
 function toggleLang(){
-alert("தமிழ் மொழி வசதி விரைவில் சேர்க்கப்படும். Tamil language content is being prepared.");
+tamil=!tamil;
+document.documentElement.lang=tamil?"ta":"en";
+document.querySelectorAll("[data-en]").forEach(el=>{
+el.textContent=tamil?el.dataset.ta:el.dataset.en;
+});
+}
+function calculate(){
+let km=Number(document.getElementById("km").value);
+let rate=Number(document.getElementById("car").value);
+if(!Number.isFinite(km)||km<=0){
+document.getElementById("result").textContent="Please enter a valid distance.";
+return;
+}
+document.getElementById("result").textContent="Estimated Fare: ₹"+(km*rate).toLocaleString("en-IN");
 }
 </script>
 </body>
